@@ -6,11 +6,17 @@ import org.springframework.stereotype.Component;
 @Component
 public class Alien {
 
-    @Autowired
     private Laptop laptop;
+
 
     public Alien() {
         System.out.println("obj created");
+    }
+
+
+    @Autowired
+    public void setLaptop(Laptop laptop) {
+        this.laptop = laptop;
     }
 
     public void test() {
